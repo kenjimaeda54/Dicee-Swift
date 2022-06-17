@@ -5,7 +5,7 @@ Simples jogo de dados em swift,conforme e clicado no botao de lancar,dois dados 
 Aprender utilizar UI interface  para construir nossas interface e como interagir com eventos no IOS
 
 ## Feature
-- Aprendi a instanciar imagens e botoes na regra de negócio  do nosso código
+- Aprendi a instanciar imagens e botões na regra de negócio  do nosso código
 - Toda entrada de código fica na ViewController
 - Aprendi dinamicamente inserir nossas fotos em uma UI
 - @IBOutlet weak e responsável por instanciar nossa parte logica com a parte da View
