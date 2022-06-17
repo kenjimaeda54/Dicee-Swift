@@ -1,5 +1,5 @@
 ## Dados
-Simples jogo de dados em swift,conforme e clicado no botao de lancar,dois dados sao jogados e aleatoriamente mostra os numeros
+Simples jogo de dados em swift, conforme e clicado no botão de lançar, dois dados são jogados e aleatoriamente mostra os números
 
 ## Objetivo
 Aprender utilizar UI interface  para construir nossas interface e como interagir com eventos no IOS
