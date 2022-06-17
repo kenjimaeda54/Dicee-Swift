@@ -1,4 +1,4 @@
-## Projeto de dados em swift
+## Dados
 Simples jogo de dados em swift,conforme e clicado no botao de lancar,dois dados sao jogados e aleatoriamente mostra os numeros
 
 ## Objetivo
