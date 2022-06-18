@@ -1,31 +1,50 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+## Dados
+Simples jogo de dados em swift, conforme e clicado no botão de lançar, dois dados são jogados e aleatoriamente mostra os números
 
-# Dicee
+## Objetivo
+Aprender utilizar UI interface  para construir nossas interface e como interagir com eventos no IOS
 
-## Our Goal
+## Feature
+- Aprendi a instanciar imagens e botões na regra de negócio  do nosso código
+- Toda entrada de código fica na ViewController
+- Aprendi dinamicamente inserir nossas fotos em uma UI
+- @IBOutlet weak e responsável por instanciar nossa parte logica com a parte da View
+- Xcode possui recurso simples para realizar essas instancias entre xml e a rega de negócio
+- UIImage e o responsável pelo dinamismo das fotos
 
-The objective of this tutorial is to introduce you to the core programming concepts that will form the foundation of most of the apps you’ll build in the future. This app will teach you a lot of important programming knowledge, while building a neat dice app.
+```swift
+import UIKit
 
-## What you will create
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var imageViewOne: UIImageView!
+    @IBOutlet weak var imageViewTwo: UIImageView!
+    let imageOne = UIImage(named: "DiceOne")
+    let imageTwo = UIImage(named: "DiceTwo")
+    let imageThree = UIImage(named: "DiceThree")
+    let imageFour = UIImage(named: "DiceFour")
+    let imageFive = UIImage(named: "DiceFive")
+    let imageSix = UIImage(named: "DiceSix")
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+    }
 
-We’re going to make a Las Vegas dice app. You can make the die roll at the press of a button or by shaking your phone. With this app in your pocket, you’ll be fully set up to settle any score on the go!
+    @IBAction func changeView(_ sender: UIButton) {
+        let arrayImage = [imageOne,imageTwo,imageThree,imageFour,imageFive,imageSix]
 
-
-## What you will learn
-
-* How to clone an existing Xcode project from GitHub.
-* Create an app with behaviour and functionality.
-* Create links between the Interface Builder files and code using IBActions and IBOutlets.
-* Get familiar with the Xcode code editor.
-* * Learn to use comments to annotate code.
-* Understand and use Swift constants and variables.
-* Understand and use collection types such as Swift arrays.
-* Test and debug your app with the Xcode console.
-* Learn about randomisation and how to generate random numbers in Swift.
+        
+        //imageViewTwo.image = arrayImage[Int.random(in: 0...5)] uma maneira de fazer aleatorio
+        imageViewTwo.image = arrayImage.randomElement() as? UIImage
+        imageViewOne.image = arrayImage.randomElement() as? UIImage
+  
+    }
+    
+}
 
 
 
->This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
 
-![End Banner](Documentation/readme-end-banner.png)
-
+```
